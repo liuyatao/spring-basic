@@ -25,7 +25,7 @@ public class RegisterUseCaseTest {
     private UserRepository userRepository ;
 
     @InjectMocks
-    private RegisterUseCase registerUseCase;
+    private RegisterUseCaseImp registerUseCase;
 
 
     @Test
