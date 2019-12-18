@@ -6,6 +6,7 @@ import com.github.liuyatao.springbasic.User;
 import com.github.liuyatao.springbasic.UserDTO;
 import com.github.liuyatao.springbasic.service.RegisterUseCase;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,6 +25,10 @@ public class UserResource {
     private final RegisterUseCase registerUseCase;
 
 
+    @GetMapping("/helloWorld")
+    public String helloWorld() {
+        return "Hello World";
+    }
 
     @PostMapping("/forums/{forumId}/register")
     public UserDTO register(@PathVariable("forumId") Long forumId, 
@@ -36,6 +41,7 @@ public class UserResource {
 
         return new UserDTO(user.getUserName(), user.getEmail());
     }
+
 
     
 }
