@@ -2,6 +2,7 @@ package com.github.liuyatao.springbasic;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * UserResource
@@ -9,6 +10,7 @@ import lombok.Data;
 
  @Data
  @AllArgsConstructor
+ @NoArgsConstructor
 public class UserDTO {
 
     private String name;

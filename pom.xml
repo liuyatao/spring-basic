@@ -55,13 +55,25 @@
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-junit-jupiter</artifactId>
-      <version>3.2.0</version>
       <scope>test</scope>
+      <exclusions>
+      	<exclusion>
+      	 <artifactId>org.mockito</artifactId>
+      	 <groupId>mockito-core</groupId>
+      	</exclusion>
+      </exclusions>
     </dependency>
+    
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>3.2.4</version>
+      <scope>test</scope>
+	  </dependency>
+    
     <dependency>
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest-library</artifactId>
-      <version>2.2</version>
       <scope>test</scope>
     </dependency>
     <dependency>
